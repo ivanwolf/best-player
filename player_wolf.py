@@ -90,9 +90,9 @@ class Node:
                 best_play = play
                 h_min = h_value
 
-        nuevo_node = Node(best_board, Board.opponent(self.color), self, best_play)
-        self.hijos.append(nuevo_node)
-        return nuevo_node
+        new_node = Node(best_board, Board.opponent(self.color), self, best_play)
+        self.hijos.append(new_node)
+        return new_node
 
     def backup(self, delta):
         node = self
