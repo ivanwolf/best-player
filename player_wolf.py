@@ -1,4 +1,3 @@
-import sys
 from math import sqrt, log
 from random import choice
 from signal import alarm, signal, SIGALRM
@@ -135,8 +134,8 @@ class Node:
         try:
             return node.hijos[index]
         except UnboundLocalError:
-            print('Necesito más tiempo, puedes darme un segundo más pora pensar mi jugada')
-            sys.exit()
+            raise Exception('Necesito más tiempo, puedes darme un segundo más pora pensar mi jugada')
+
 
     @staticmethod
     def default_policy(board, color):
